@@ -1,12 +1,12 @@
 # seazone
 challenge
 
-##Dependencies
+## Dependencies
 
 - Python 3.9
 - Docker
 
-##How to configure the database
+## How to configure the database
 
 Open a terminal, verify if your docker has root privileges and run:
 ```
@@ -29,7 +29,7 @@ The password is `123`.
 CREATE DATABASE seazone;
 ```
 
-##Running the Application
+## Running the Application
 
 After successfully creating the database to the application run, you should download
 clone the repository then run on root directory:
@@ -47,9 +47,12 @@ on the database:
 python manage.py migrate
 ```
 now your database should be ready, I created a script to seed the minimal information
-necessary to see results, you just need to run this: `python seeder.py`
+necessary to see results, you just need to run this: 
+```
+python seeder.py
+```
 
-##WEB
+## WEB
 
 To se the result of the application, go to the root project and run:
 ```angular2html
@@ -59,3 +62,18 @@ Click the link showing on terminal, you should see an object that shows the host
 the events that he have, and in which superstructure, for future development, endpoints
 showing only the event between dates can be implemented quickly creating a new Serializer
 and a new View, as well sort by host or building.
+
+Links for testing:
+
+[Agenda by Host](http://localhost:8000/host/1/agenda) 
+>The one above you can change on the URL from 1 to 2, it's the two schedules created
+for testing
+
+> The following commands were created using simple Router, so you can add the id at the 
+> end of the URL to get specific object
+
+[Hosts](http://localhost:8000/hosts/)
+
+[Superstructures](http://localhost:8000/superstructures/)
+
+[Schedules](http://localhost:8000/schedules/)
