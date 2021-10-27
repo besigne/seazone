@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from core.models.host import Host
-from core.serializers.event import EventModelSerializer
-from core.serializers.superstructure import SuperstructureModelSerializer
+from core.serializers.schedule import ScheduleModelSerializer
 
 
 class HostModelSerializer(serializers.ModelSerializer):
@@ -12,7 +11,6 @@ class HostModelSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         ret = super().to_representation(instance)
-        ret['event'] = EventModelSerializer(many=True, instance=instance.event).data
-        ret['superstructure'] = SuperstructureModelSerializer(many=True, instance=instance.superstructure).data
+        ret['schedule'] = ScheduleModelSerializer(many=True, instance=instance.schedule).data
 
         return ret

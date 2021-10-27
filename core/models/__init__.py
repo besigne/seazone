@@ -1,4 +1,4 @@
 from .superstructure import Superstructure
-from .event import Event
+from .schedule import Schedule
 from .host import Host
 from .agenda import Agenda

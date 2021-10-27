@@ -1,5 +1,4 @@
 from django.db import models
-from core.models.superstructure import Superstructure
 from core.models.host import Host
 
 

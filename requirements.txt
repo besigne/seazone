@@ -6,3 +6,6 @@ asgiref~=3.4.1
 setuptools~=57.4.0
 djangorestframework~=3.12.4
 mysqlclient~=2.0.3
+psycopg2-binary>=2.8
+SQLAlchemy~=1.4.26
+panda=0.20.3
